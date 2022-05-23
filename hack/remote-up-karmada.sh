@@ -46,6 +46,10 @@ fi
 # deploy karmada control plane
 SCRIPT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
 source "${SCRIPT_ROOT}"/hack/util.sh
+
+# proxy setting in China mainland
+util::prepare_setting_in_china_mainland "${SCRIPT_ROOT}"
+
 "${SCRIPT_ROOT}"/hack/deploy-karmada.sh "${HOST_CLUSTER_KUBECONFIG}" "${HOST_CLUSTER_NAME}" "remote"
 kubectl config use-context karmada-apiserver --kubeconfig="${HOST_CLUSTER_KUBECONFIG}"
 
