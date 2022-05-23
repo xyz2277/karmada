@@ -2,8 +2,10 @@ package utils
 
 import (
 	"fmt"
-	"github.com/karmada-io/karmada/pkg/karmadactl/cmdinit/options"
+
 	"k8s.io/klog/v2"
+
+	"github.com/karmada-io/karmada/pkg/karmadactl/cmdinit/options"
 )
 
 const (
